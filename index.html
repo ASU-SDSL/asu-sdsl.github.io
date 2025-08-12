@@ -1,18 +1,192 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <title>ASU SDSL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Devil Satellite Laboratory</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+        .banner {
+            background: #8c1d40;
+            color: #fff;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+            color: #ffc627;
+        }
+        .banner p {
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 48px auto 40px auto;
+            background: none;
+            border-radius: 0;
+            border: none;
+            padding: 40px 28px 36px 28px;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 16px;
+            color: #8c1d40;
+        }
+        .description {
+            font-size: 1.15em;
+            margin-bottom: 32px;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .project-card {
+            background: #fafafa;
+            border-radius: 12px;
+            border: 1.5px solid #e0e0e0;
+            width: 290px;
+            padding: 22px 16px 28px 16px;
+            text-align: center;
+            transition: border-color 0.18s, transform 0.18s;
+        }
+        .project-card:hover {
+            /* No box-shadow for hover */
+            transform: translateY(-7px) scale(1.035);
+            border-color: #ffc627;
+        }
+        .project-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            border-radius: 7px;
+            margin-bottom: 14px;
+            background: none;
+            height: auto;
+            max-height: 290px;
+            display: block;
+        }
+        .project-title {
+            font-size: 1.2em;
+            color: #8c1d40;
+            margin-bottom: 8px;
+        }
+        .project-desc {
+            font-size: 1em;
+            color: #444;
+        }
+        @media (max-width: 700px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                padding: 18px 6px;
+            }
+        }
+        .footer {
+            background: #8c1d40;
+            color: #fff;
+            text-align: center;
+            padding: 32px 10px 20px 10px;
+            margin-top: 48px;
+        }
+        .footer .footer-content {
+            max-width: 900px;
+            margin: 0 auto 18px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .footer .logos {
+            margin-top: 10px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer .logos img {
+            height: 48px;
+            background: #fff;
+            border-radius: 6px;
+            padding: 4px 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+    </style>
 </head>
-
 <body>
-    <h1>ASU Sun Devil Satellite Laboratory</h1>
-    <a href="https://github.com/ASU-SDSL/coconut-fsw">coconut-fsw github</a>
-    <br/>
-    <a href="https://asu-sdsl.github.io/coconut-fsw/">coconut-fsw Doxygen</a>
-
-
+    <div class="banner">
+        <h1>Sun Devil Satellite Laboratory</h1>
+        <p>Exploring space, engineering satellites, and building the future at Arizona State University.</p>
+    </div>
+    <div class="container">
+        <div class="section-title">About Us</div>
+        <div class="description">
+            The ASU Sun Devil Satellite Laboratory (SDSL) is a student-led organization dedicated to the design, construction, and operation of small satellites and space systems. We provide hands-on experience in aerospace engineering, software, and project management, empowering students to contribute to real-world space missions.
+        </div>
+        <div class="section-title">Projects</div>
+        <div class="projects">
+            <div class="project-card">
+                <img src="images/squid_cad_photo.png" alt="Coconut FSW">
+                <div class="project-title">SquidSat CubeSat</div>
+                <div class="project-desc">
+                    SquidSat is a 3u CubeSat that provides a universal satellite CubeSat bus with plug an play technology along with flying two other payloads in partner with Luminosity Laboratory and Power Electronics and Energy Conversion Lab. <a href="mailto:abournia@asu.edu">Learn More.</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/coconut_logo.png" alt="Coconut CubeSat Logo">
+                <div class="project-title">Coconut CubeSat</div>
+                <div class="project-desc">
+                    Coconut will enable the creation of a communication network between different LoRa devices, allowing remote ground nodes to uplink data to the CubeSat to be downlinked at the ASU ground station. <a href="https://github.com/ASU-SDSL/coconut-fsw">Learn More.</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/ascend-alec.png" alt="Ground Station">
+                <div class="project-title">ASCEND High Altitude Balloon</div>
+                <div class="project-desc">
+                    Arizona Space Grant program designed to engage undergraduate students from the state of Arizona to build, design, fly, operate, and analyze for a full space mission cycle. <a href="https://asu-ascend.github.io/">Learn More.</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/dora-mission.png" alt="Payload Development">
+                <div class="project-title">DORA CubeSat</div>
+                <div class="project-desc">Deployable Optical Receiver Aperture - build in partnership with NASA's Jet Propulsion Laboratory. <a href="https://loco.lab.asu.edu/research/dora/">Learn More.</a></div>
+            </div>
+            <!--Blue Origin, Lockheed, Boeing, Northrup, Space Grant, NASA, ANSR, -->
+            
+        </div>
+    </div>
+    <hr style="border:none;border-top:2px solid #e0e0e0;margin:48px auto 24px auto;width:90%;max-width:600px;" />
+    <div style="width:100%;display:flex;justify-content:center;align-items:center;margin:0 0 0 0;">
+        <img src="images/sdsl-logo.png" alt="Lab Logo" style="height:90px;max-width:220px;object-fit:contain;filter: drop-shadow(0 2px 8px rgba(140,29,64,0.08));" />
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div>Contact us: <a href="mailto:satellitelab.asu@gmail.com" style="color:#ffc627;text-decoration:underline;">satellitelab.asu@gmail.com</a></div>
+            <div>Arizona State University &mdash; Sun Devil Satellite Laboratory</div>
+            <div class="logos">
+                <img src="images/asu.png" alt="ASU Logo">
+                <img src="images/altium.png" alt="Altium Logo">
+                <img src="images/nasa logo.png" alt="Altium Logo">
+                <img src="images/Northrop-Grumman.png" alt="Altium Logo">
+                <img src="images/Boeing-Logo.png" alt="Altium Logo">
+                <img src="images/blue-origin.png" alt="Altium Logo">
+                <img src="images/az space grant logo.jpg" alt="Altium Logo">
+                <img src="images/ANSR LOGO.png" alt="Altium Logo">
+                <!-- Add more logos as needed -->
+            </div>
+        </div>
+        <div style="font-size:0.95em;opacity:0.7;">&copy; 2025 ASU SDSL. All rights reserved.</div>
+    </footer>
 </body>
-
-
 </html>
